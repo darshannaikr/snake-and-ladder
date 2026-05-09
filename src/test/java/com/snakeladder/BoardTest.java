@@ -1,6 +1,7 @@
 package com.snakeladder;
 
 import com.snakeladder.board.Board;
+import com.snakeladder.exception.InvalidBoardException;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -37,5 +38,25 @@ public class BoardTest {
         int result = board.resolvePosition(25);
 
         assertEquals(25, result);
+    }
+
+    @Test
+    void testInvalidSnake() {
+
+        Board board = new Board();
+
+        assertThrows(InvalidBoardException.class, () -> {
+            board.addSnake(10, 50);
+        });
+    }
+
+    @Test
+    void testInvalidLadder() {
+
+        Board board = new Board();
+
+        assertThrows(InvalidBoardException.class, () -> {
+            board.addLadder(80, 20);
+        });
     }
 }
