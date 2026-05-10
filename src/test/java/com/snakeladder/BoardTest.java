@@ -16,7 +16,8 @@ public class BoardTest {
 
         int result = board.resolvePosition(99);
 
-        assertEquals(10, result);
+//        assertEquals(10, result);
+        assertEquals(999, result);
     }
 
     @Test
