@@ -1,3 +1,4 @@
+![Java CI Pipeline](https://github.com/darshannaikr/snake-and-ladder/actions/workflows/ci.yml/badge.svg)
 🐍 Snake and Ladder Game (Low-Level Design - Java)
 📌 Overview
 
@@ -18,14 +19,15 @@ The application simulates a multiplayer turn-based game with support for snakes,
 The project follows Separation of Concerns and modular design:
 
 🔹 Core Components
-Component	Responsibility
-Player	Maintains player state (name, position)
-Snake	Represents snake (head → tail)
-Ladder	Represents ladder (start → end)
-Board	Stores snakes & ladders, resolves position
-Dice	Generates random dice values
-Game	Controls game flow and turn management
-Main	Entry point (input handling & execution)
+| Component | Responsibility |
+|------------|----------------|
+| `Player` | Maintains player state (name, position) |
+| `Snake` | Represents snake (head → tail) |
+| `Ladder` | Represents ladder (start → end) |
+| `Board` | Stores snakes & ladders, resolves position |
+| `Dice` | Generates random dice values |
+| `Game` | Controls game flow and turn management |
+| `Main` | Entry point (input handling & execution) |
 
 🧠 Key Design Decisions
 ✅ Used Queue (FIFO) for fair turn-based player rotation
